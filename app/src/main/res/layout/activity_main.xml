@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".Domain.Activity.MainActivity">
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="Register"
+     android:textSize="40dp"
+     app:fontFamily="@font/appetite"
+     android:textColor="@color/black"
+     android:layout_marginTop="40dp"
+     android:layout_gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/UserInputError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="80dp"
+
+        android:hint="Username"
+        android:textColorHint="#fff"
+        android:theme="@style/LoginTextInputLayoutStyle"
+        android:backgroundTint="@color/black"
+
+        app:startIconDrawable="@drawable/username"
+        app:endIconMode="clear_text"
+        app:counterMaxLength="15"
+        app:counterTextColor="@color/white"
+        app:counterEnabled="true"
+        app:boxStrokeColor="#DDA0DD "
+        app:hintTextColor="@color/white"
+
+        style="@style/LoginTextInputLayoutStyle"
+   >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:id="@+id/userEditText"
+            android:textCursorDrawable = "@drawable/custom_edit"
+            android:textColor="@color/white"
+
+            android:fontFamily="@font/days2"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+
+        android:hint="Email"
+        android:textColorHint="#fff"
+        android:theme="@style/LoginTextInputLayoutStyle"
+        android:backgroundTint="@color/black"
+
+
+        app:startIconDrawable="@drawable/email"
+        app:endIconMode="clear_text"
+        app:counterMaxLength="25"
+        app:counterTextColor="@color/white"
+        app:counterEnabled="true"
+        app:boxStrokeColor="#DDA0DD "
+        app:hintTextColor="@color/white"
+
+        style="@style/LoginTextInputLayoutStyle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="25"
+            android:id="@+id/emailText"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textCursorDrawable  = "@drawable/custom_edit"
+            android:fontFamily="@font/days2"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+
+        android:hint="Password"
+        android:theme="@style/LoginTextInputLayoutStyle"
+        android:textColorHint="#fff"
+
+        app:boxStrokeColor="#DDA0DD"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/password"
+        app:counterEnabled="true"
+        app:counterMaxLength="15"
+        app:counterTextColor="@color/white"
+
+        style="@style/LoginTextInputLayoutStyle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordEdiText"
+            android:maxLength="15"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
+            android:textCursorDrawable  = "@drawable/custom_edit"
+
+            android:fontFamily="@font/days2"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/resultText"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"/>
+        <android.widget.Button
+            android:id="@+id/haveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:onClick="haveButtonClick"
+            android:text="Уже есть аккаунт"
+            android:fontFamily="@font/days2"
+            android:textColor="#111"
+            android:background="@drawable/gradient_button"/>
+
+    <android.widget.Button
+        android:id="@+id/LogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:text="Зарегистрироваться"
+        android:fontFamily="@font/days2"
+        android:textColor="#111"
+        android:background="@drawable/gradient_button"/>
+
+
+</LinearLayout>
